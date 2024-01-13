@@ -24,7 +24,7 @@ class Piece:
 
 			# Pawn promotion
 			if self.notation == ' ':
-				if self.y == 0 or self.y == 7:
+				if (self.y == 0 and self.color == 'white') or (self.y == 7 and self.color == 'black'):
 					from data.classes.pieces.Queen import Queen
 					square.occupying_piece = Queen(
 						(self.x, self.y),
